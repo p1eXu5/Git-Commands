@@ -78,3 +78,11 @@ _A list of my commonly used Git commands_
 | ------- | ----------- |
 | `git flow feature start <feature_branch>` | Creating a feature branch |
 | `git flow feature finish <feature_branch>` | Finishing a feature branch |
+
+### Vim
+
+To exit Vim:
+
+1. If you are in edit mode, first press the <Esc> key.
+2. Then enter :wq + <Enter> to save and exit.
+
