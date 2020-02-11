@@ -78,6 +78,8 @@ _A list of my commonly used Git commands_
 | ------- | ----------- |
 | `git flow feature start <feature_branch>` | Creating a feature branch |
 | `git flow feature finish <feature_branch>` | Finishing a feature branch |
+| `git flow hotfix start <hotfix_branch>` | Creating a hotfix branch |
+| `git flow hotfix finish <hotfix_branch>` | Finishing a hotfix branch |
 
 ### Vim
 
