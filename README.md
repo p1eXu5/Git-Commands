@@ -72,6 +72,13 @@ _A list of my commonly used Git commands_
 | `git log --oneline` | View changes (briefly) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
 
+### Service
+
+| Command           | Description              | Example |
+| ----------------- | ------------------------ | --------|
+| `git rm --cached` | Remove a file from index | $ git rm --cached ./src/MyproofCore.AuthServer/Properties/PublishProfiles/FolderProfile.pubxml
+
+
 ### Gitflow
 
 | Command | Description |
