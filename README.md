@@ -53,10 +53,10 @@ _A list of my commonly used Git commands_
 ### How to merge a specific commit
 
 `git checkout <source_branch>` <br/>
-`git log`  // or (git reflog)
--- copy branch commit_hash
-`git checkout <target_branch>`
-`git cherry-pick <commit_hash>`
+`git log`  // or (git reflog) <br/>
+-- copy branch commit_hash <br/>
+`git checkout <target_branch>` <br/>
+`git cherry-pick <commit_hash>` <br/>
 
 
 ### Sharing & Updating Projects
