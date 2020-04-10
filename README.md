@@ -52,7 +52,7 @@ _A list of my commonly used Git commands_
 
 ### How to merge a specific commit
 
-`git checkout <source_branch>`
+`git checkout <source_branch>` <br/>
 `git log`  // or (git reflog)
 -- copy branch commit_hash
 `git checkout <target_branch>`
