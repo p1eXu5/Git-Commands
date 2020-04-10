@@ -50,6 +50,15 @@ _A list of my commonly used Git commands_
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 
+### How to merge a specific commit
+
+`git checkout <source_branch>`
+`git log`  // or (git reflog)
+-- copy branch commit_hash
+`git checkout <target_branch>`
+`git cherry-pick <commit_hash>`
+
+
 ### Sharing & Updating Projects
 
 | Command | Description |
