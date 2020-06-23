@@ -50,6 +50,12 @@ _A list of my commonly used Git commands_
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 
+### Submodules
+| Command | Description |
+| ------- | ----------- |
+| `git add [repo] [path]` | Add submodule |
+| `git submodule update --init --recursive` | Update submodule |
+
 ### How to merge a specific commit
 
 `git checkout <source_branch>` <br/>
