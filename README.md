@@ -53,7 +53,7 @@ _A list of my commonly used Git commands_
 ### Submodules
 | Command | Description |
 | ------- | ----------- |
-| `git add [repo] [path]` | Add submodule |
+| `git submodule add [repo] [path]` | Add submodule |
 | `git submodule update --init --recursive` | Update submodule |
 
 ### How to merge a specific commit
