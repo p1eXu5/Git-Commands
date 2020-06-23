@@ -51,10 +51,10 @@ _A list of my commonly used Git commands_
 | `git stash clear` | Remove all stashed entries |
 
 ### Submodules
-| Command | Description |
-| ------- | ----------- |
-| `git submodule add [repo] [path]` | Add submodule |
-| `git submodule update --init --recursive` | Update submodule |
+| Command | Description | Example |
+| ------- | ----------- | ------- |
+| `git submodule add [repo] [path]` | Add submodule | $ git submodule add https://github.com/p1eXu5/p1eXu5.Wpf.git ./submodules/p1eXu5.Wpf |
+| `git submodule update --init --recursive` | Update submodule | |
 
 ### How to merge a specific commit
 
