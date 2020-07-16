@@ -86,6 +86,8 @@ _A list of my commonly used Git commands_
 | `git log --summary` | View changes (detailed) |
 | `git log --oneline` | View changes (briefly) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
+| `gitk [fileName]` | View file commits |
+| `gitk --follow [fileName]` | View file commits with to follow filename past renames |
 
 ### Service
 
