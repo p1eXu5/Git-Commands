@@ -93,7 +93,9 @@ _A list of my commonly used Git commands_
 
 | Command           | Description              | Example |
 | ----------------- | ------------------------ | --------|
-| `git rm --cached` | Remove a file from index | $ git rm --cached ./src/MyproofCore.AuthServer/Properties/PublishProfiles/FolderProfile.pubxml
+| `git rm --cached` | Remove a file from index | $ git rm --cached ./src/MyproofCore.AuthServer/Properties/PublishProfiles/FolderProfile.pubxml |
+| `git update-index --assume-unchanged <file>` | | |
+| `git update-index --no-assume-unchanged <file>` | | |
 
 
 ### Gitflow
