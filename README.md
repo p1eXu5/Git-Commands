@@ -107,6 +107,24 @@ _A list of my commonly used Git commands_
 | `git flow hotfix start <hotfix_branch>` | Creating a hotfix branch |
 | `git flow hotfix finish <hotfix_branch>` | Finishing a hotfix branch |
 
+
+### Submodules
+
+| Command | Description |
+| ------- | ----------- |
+| `git submodule add <repo> <path_to_submodule_content>` | Adding submodule |
+| `git submodule update --init --recursive` | To restore |
+
+##### To remove a submodule you need to:
+
+- Delete the relevant section from the .gitmodules file.
+- Stage the .gitmodules changes git add .gitmodules
+- Delete the relevant section from .git/config.
+- Run git rm --cached path_to_submodule (no trailing slash).
+- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
+- Commit git commit -m "Removed submodule <name>"
+- Delete the now untracked submodule files rm -rf path_to_submodule
+
 ### Vim
 
 To exit Vim:
