@@ -112,7 +112,7 @@ _A list of my commonly used Git commands_
 
 | Command | Description | Example |
 | ------- | ----------- | ------- |
-| `git submodule add <repo> <path_to_submodule_content>` | Adding submodule | `git submodule add https://github.com/p1eXu5/Result.git .submodules\p1eXu5.Result` |
+| `git submodule add <repo> <path_to_submodule_content>` | Adding submodule | `git submodule add https://github.com/p1eXu5/Result.git .submodules/p1eXu5.Result` |
 | `git submodule update --init --recursive` | To restore |
 
 ### To remove a submodule you need to:
