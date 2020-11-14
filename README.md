@@ -29,6 +29,12 @@ _A list of my commonly used Git commands_
 | `git commit -m "[commit message]"` | Commit changes |
 | `git rm -r [file-name.txt]` | Remove a file (or folder) |
 
+To stop tracking a file you need to remove it from the index. This can be achieved with this command.
+`git rm --cached <file>`
+
+If you want to remove a whole folder, you need to remove all files in it recursively.
+`git rm -r --cached <folder>`
+
 ### Branching & Merging
 
 | Command | Description |
