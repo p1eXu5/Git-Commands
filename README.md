@@ -112,7 +112,7 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git flow feature finish <feature_branch>` | Finishing a feature branch |
 | `git flow hotfix start <hotfix_branch>` | Creating a hotfix branch |
 | `git flow hotfix finish <hotfix_branch>` | Finishing a hotfix branch |
-
+| `git branch -d feature/your-feature-name-here` | Delete unfinished hotfix or feature |
 
 ### Submodules
 
