@@ -1,6 +1,22 @@
 Git Commands
 ============
 
+### Content
+
+- [Getting & Creating Projects](#Getting-&-Creating-Projects)
+- [Basic Snapshotting](#Basic-Snapshotting)
+- [Branching & Merging](#Branching-&-Merging)
+- [Submodules](#Submodules)
+- [How to merge a specific commit](#How-to-merge-a-specific-commit)
+- [Sharing & Updating Projects](#Sharing-&-Updating-Projects)
+- [Tags](#Tags)
+- [Inspection & Comparison](#Inspection-&-Comparison)
+- [Removing & Ignoring In Version Control](#Removing-&-Ignoring-In-Version-Control)
+- [Gitflow](#Gitflow)
+- [Vim](#Vim)
+
+<br/>
+
 ## Translated Versions
 - [Versão em português](READMEpt.md)
 
@@ -12,14 +28,19 @@ _A list of my commonly used Git commands_
 
 --
 
-### Getting & Creating Projects
+<br/>
+
+## Getting & Creating Projects
 
 | Command | Description |
 | ------- | ----------- |
 | `git init` | Initialize a local Git repository |
 | `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
 
-### Basic Snapshotting
+
+<br/>
+
+## Basic Snapshotting
 
 | Command | Description |
 | ------- | ----------- |
@@ -35,7 +56,10 @@ To stop tracking a file you need to remove it from the index. This can be achiev
 If you want to remove a whole folder, you need to remove all files in it recursively.
 `git rm -r --cached <folder>`
 
-### Branching & Merging
+
+<br/>
+
+## Branching & Merging
 
 | Command | Description |
 | ------- | ----------- |
@@ -56,13 +80,30 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 
-### Submodules
+
+<br/>
+
+## Submodules
+
 | Command | Description | Example |
 | ------- | ----------- | ------- |
-| `git submodule add [repo] [path]` | Add submodule | $ git submodule add https://github.com/p1eXu5/p1eXu5.Wpf.git ./submodules/p1eXu5.Wpf |
-| `git submodule update --init --recursive` | Update submodule | |
+| `git submodule add <repo> <path_to_submodule_content>` | Adding submodule | `git submodule add https://github.com/p1eXu5/Result.git .submodules/p1eXu5.Result` |
+| `git submodule update --init --recursive` | To restore |
 
-### How to merge a specific commit
+#### To remove a submodule you need to:
+
+- Delete the relevant section from the .gitmodules file.
+- Stage the .gitmodules changes git add .gitmodules
+- Delete the relevant section from .git/config.
+- Run git rm --cached path_to_submodule (no trailing slash).
+- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
+- Commit git commit -m "Removed submodule <name>"
+- Delete the now untracked submodule files rm -rf path_to_submodule
+
+
+<br/>
+
+## How to merge a specific commit
 
 `git checkout <source_branch>` <br/>
 `git log`  // or (git reflog) <br/>
@@ -71,7 +112,9 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 `git cherry-pick <commit_hash>` <br/>
 
 
-### Sharing & Updating Projects
+<br/>
+
+## Sharing & Updating Projects
 
 | Command | Description |
 | ------- | ----------- |
@@ -84,7 +127,35 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
 | `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
 
-### Inspection & Comparison
+
+<br/>
+
+## Tags
+
+| Command | Description | Example |
+| ------- | ----------- | ------- |
+| `git tag` | View tags | |
+| `git show-ref --tags` | View tag refs | |
+| `git ls-remote --tags` | View remote tags | |
+| `git tag -a <tag_name> -m <commit>` | Add annotated tag | `$ git tag -a v0.0.002 -m "get drugs through OnExpanded"` |
+| `git push origin <tag_name>` | Push tag to remote | `$ git push origin v0.0.002` |
+| `git push origin --tags` | To push all of the tags to the remote repo | |
+| `git push -f origin <tag_name>` | Update the remote tag | | 
+| `git tag -a -f <tag_name> <commit_hash>` | Update tag to commit | `$ git tag -a -f v0.0.002 09ffef0a96b107fccf955a6bb74a14493dc06810` |
+| `git tag -fa <tagname>` | Update tag to the recent commit | |
+| `git push origin :refs/tags/<tag_name>` | Delete the tag on any remote before you push | |
+
+There are 2 types of tags - lightweight and annotated. Lightweight tags are merely refs that point to some object whereas annotated tags are a separate git object by themselves, and store a lot more information like author, committer, a commit message, etc. [link]()
+
+
+    `<rev>^{}, e.g. v0.99.8^{}`
+
+A suffix ^ followed by an empty brace pair means the object could be a tag, and dereference the tag recursively until a non-tag object is found. (which I'm guesssing is storing the commit information when you created the tag.(c))
+[link](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions)
+
+<br/>
+
+## Inspection & Comparison
 
 | Command | Description |
 | ------- | ----------- |
@@ -95,7 +166,10 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `gitk [fileName]` | View file commits |
 | `gitk --follow [fileName]` | View file commits with to follow filename past renames |
 
-### Service
+
+<br/>
+
+## Removing & Ignoring In Version Control
 
 | Command           | Description              | Example |
 | ----------------- | ------------------------ | --------|
@@ -104,7 +178,7 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git update-index --no-assume-unchanged <file>` | | |
 
 
-### Gitflow
+## Gitflow
 
 | Command | Description |
 | ------- | ----------- |
@@ -114,24 +188,8 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git flow hotfix finish <hotfix_branch>` | Finishing a hotfix branch |
 | `git branch -d feature/your-feature-name-here` | Delete unfinished hotfix or feature |
 
-### Submodules
 
-| Command | Description | Example |
-| ------- | ----------- | ------- |
-| `git submodule add <repo> <path_to_submodule_content>` | Adding submodule | `git submodule add https://github.com/p1eXu5/Result.git .submodules/p1eXu5.Result` |
-| `git submodule update --init --recursive` | To restore |
-
-### To remove a submodule you need to:
-
-- Delete the relevant section from the .gitmodules file.
-- Stage the .gitmodules changes git add .gitmodules
-- Delete the relevant section from .git/config.
-- Run git rm --cached path_to_submodule (no trailing slash).
-- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
-- Commit git commit -m "Removed submodule <name>"
-- Delete the now untracked submodule files rm -rf path_to_submodule
-
-### Vim
+## Vim
 
 To exit Vim:
 
