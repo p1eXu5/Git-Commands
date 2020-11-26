@@ -144,6 +144,7 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git tag -a -f <tag_name> <commit_hash>` | Update tag to commit | `$ git tag -a -f v0.0.002 09ffef0a96b107fccf955a6bb74a14493dc06810` |
 | `git tag -fa <tagname>` | Update tag to the recent commit | |
 | `git push origin :refs/tags/<tag_name>` | Delete the tag on any remote before you push | |
+| `git push --follow-tags` | Push commits and tags in one command | |
 
 There are 2 types of tags - lightweight and annotated. Lightweight tags are merely refs that point to some object whereas annotated tags are a separate git object by themselves, and store a lot more information like author, committer, a commit message, etc. [link]()
 
