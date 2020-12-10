@@ -15,9 +15,8 @@ Git Commands
 - [Gitflow](#Gitflow)
 - [Vim](#Vim)
 
-<br/>
 
-## Translated Versions
+## <br/> Translated Versions
 - [Versão em português](READMEpt.md)
 
 ___
@@ -28,17 +27,16 @@ _A list of my commonly used Git commands_
 
 --
 
-<br/>
 
-## Getting & Creating Projects
+## <br/> Getting & Creating Projects
 
 | Command | Description |
 | ------- | ----------- |
 | `git init` | Initialize a local Git repository |
 | `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## Basic Snapshotting
 
@@ -56,8 +54,8 @@ To stop tracking a file you need to remove it from the index. This can be achiev
 If you want to remove a whole folder, you need to remove all files in it recursively.
 `git rm -r --cached <folder>`
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## Branching & Merging
 
@@ -80,8 +78,8 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## Submodules
 
@@ -100,8 +98,8 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 - Commit git commit -m "Removed submodule <name>"
 - Delete the now untracked submodule files rm -rf path_to_submodule
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## How to merge a specific commit
 
@@ -111,8 +109,8 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 `git checkout <target_branch>` <br/>
 `git cherry-pick <commit_hash>` <br/>
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## Sharing & Updating Projects
 
@@ -127,8 +125,8 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
 | `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## Tags
 
@@ -154,7 +152,8 @@ There are 2 types of tags - lightweight and annotated. Lightweight tags are mere
 A suffix ^ followed by an empty brace pair means the object could be a tag, and dereference the tag recursively until a non-tag object is found. (which I'm guesssing is storing the commit information when you created the tag.(c))
 [link](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions)
 
-<br/>
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
+
 
 ## Inspection & Comparison
 
@@ -167,8 +166,8 @@ A suffix ^ followed by an empty brace pair means the object could be a tag, and 
 | `gitk [fileName]` | View file commits |
 | `gitk --follow [fileName]` | View file commits with to follow filename past renames |
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
-<br/>
 
 ## Removing & Ignoring In Version Control
 
@@ -177,6 +176,8 @@ A suffix ^ followed by an empty brace pair means the object could be a tag, and 
 | `git rm --cached` | Remove a file from index | $ git rm --cached ./src/MyproofCore.AuthServer/Properties/PublishProfiles/FolderProfile.pubxml |
 | `git update-index --assume-unchanged <file>` | | |
 | `git update-index --no-assume-unchanged <file>` | | |
+
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
 
 
 ## Gitflow
@@ -189,6 +190,8 @@ A suffix ^ followed by an empty brace pair means the object could be a tag, and 
 | `git flow hotfix finish <hotfix_branch>` | Finishing a hotfix branch |
 | `git branch -d feature/your-feature-name-here` | Delete unfinished hotfix or feature |
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
+
 
 ## Vim
 
@@ -197,3 +200,4 @@ To exit Vim:
 1. If you are in edit mode, first press the <Esc> key.
 2. Then enter :wq + <Enter> to save and exit.
 
+<br/><div style="text-align: right"> [Content](#git-commands) </div>
