@@ -136,6 +136,10 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | `git show-ref --tags` | View tag refs | |
 | `git ls-remote --tags` | View remote tags | |
 | `git tag -a <tag_name> -m <commit>` | Add annotated tag | `$ git tag -a v0.0.002 -m "get drugs through OnExpanded"` |
+| `git fetch [--all] --tags` | To fetch tags from your remote repository | |
+| `git checkout tags/<tag_name> -b <new_branch_name>` | To checkout to tag from any branch | `git checkout tags/v1.0 -b v1.0-branch` |
+| `git log --oneline --graph` | To inspect. Make sure that the HEAD pointer (the latest commit) is pointing to your annotated tag. | |
+| ```tag=$(git describe --tags `git rev-list --tags --max-count=1`)``` | Retrieve the latest tag available | `$ git fetch --tags` <br/> ```$ tag=$(git describe --tags `git rev-list --tags --max-count=1`)``` <br/> `$ echo $tag` <br/> `$ git checkout $tag -b latest` <br/> `$ git log --oneline --graph` |
 | `git push origin <tag_name>` | Push tag to remote | `$ git push origin v0.0.002` |
 | `git push origin --tags` | To push all of the tags to the remote repo | |
 | `git push -f origin <tag_name>` | Update the remote tag | | 
@@ -150,7 +154,8 @@ There are 2 types of tags - lightweight and annotated. Lightweight tags are mere
     `<rev>^{}, e.g. v0.99.8^{}`
 
 A suffix ^ followed by an empty brace pair means the object could be a tag, and dereference the tag recursively until a non-tag object is found. (which I'm guesssing is storing the commit information when you created the tag.(c))
-[link](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions)
+[link 1](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions)
+[link 2](https://devconnected.com/how-to-checkout-git-tags/)
 
 <br/><div style="text-align: right"> [Content](#git-commands) </div>
 
