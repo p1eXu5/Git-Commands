@@ -3,15 +3,15 @@ Git Commands
 
 ### Content
 
-- [Getting & Creating Projects](#Getting-&amp;-Creating-Projects)
+- [Getting & Creating Projects](#Getting--Creating-Projects)
 - [Basic Snapshotting](#Basic-Snapshotting)
-- [Branching & Merging](#Branching-&amp;-Merging)
+- [Branching & Merging](#Branching--Merging)
 - [Submodules](#Submodules)
 - [How to merge a specific commit](#How-to-merge-a-specific-commit)
-- [Sharing & Updating Projects](#Sharing-&amp;-Updating-Projects)
+- [Sharing & Updating Projects](#Sharing--Updating-Projects)
 - [Tags](#Tags)
-- [Inspection & Comparison](#Inspection-&amp;-Comparison)
-- [Removing & Ignoring In Version Control](#Removing-&amp;-Ignoring-In-Version-Control)
+- [Inspection & Comparison](#Inspection--Comparison)
+- [Removing & Ignoring In Version Control](#Removing--Ignoring-In-Version-Control)
 - [Gitflow](#Gitflow)
 - [Vim](#Vim)
 
