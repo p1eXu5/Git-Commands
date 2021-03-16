@@ -181,6 +181,7 @@ A suffix ^ followed by an empty brace pair means the object could be a tag, and 
 | `git rm --cached` | Remove a file from index | $ git rm --cached ./src/MyproofCore.AuthServer/Properties/PublishProfiles/FolderProfile.pubxml |
 | `git update-index --assume-unchanged <file>` | | |
 | `git update-index --no-assume-unchanged <file>` | | |
+| `git check-ignore -v -- <file>` | check ignored file | `git check-ignore -v -- ign.cs` |
 
 <br/><div style="text-align: right"> [Content](#git-commands) </div>
 
