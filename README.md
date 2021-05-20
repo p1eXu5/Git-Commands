@@ -133,7 +133,7 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | Command | Description | Example |
 | ------- | ----------- | ------- |
 | `git tag` | View tags | |
-| `git tag | egrep <word>` | Search tags with name contained word | |
+| <code>git tag &#124; egrep &lt;word&gt;</code> | Search tags with name contained word | |
 | `git show-ref --tags` | View tag refs | |
 | `git ls-remote --tags` | View remote tags | |
 | `git tag -a <tag_name> -m <tagging_message>` | Add annotated tag | `$ git tag -a v0.0.002 -m "get drugs through OnExpanded"` |
