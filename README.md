@@ -133,9 +133,11 @@ If you want to remove a whole folder, you need to remove all files in it recursi
 | Command | Description | Example |
 | ------- | ----------- | ------- |
 | `git tag` | View tags | |
+| `git tag | egrep <word>` | Search tags with name contained word | |
 | `git show-ref --tags` | View tag refs | |
 | `git ls-remote --tags` | View remote tags | |
-| `git tag -a <tag_name> -m <commit>` | Add annotated tag | `$ git tag -a v0.0.002 -m "get drugs through OnExpanded"` |
+| `git tag -a <tag_name> -m <tagging_message>` | Add annotated tag | `$ git tag -a v0.0.002 -m "get drugs through OnExpanded"` |
+| `git tag <tag_name>` | Add lightweight  tag | `$ git tag v1.4-lw` |
 | `git fetch [--all] --tags` | To fetch tags from your remote repository | |
 | `git checkout tags/<tag_name> -b <new_branch_name>` | To checkout to tag from any branch | `git checkout tags/v1.0 -b v1.0-branch` |
 | `git log --oneline --graph` | To inspect. Make sure that the HEAD pointer (the latest commit) is pointing to your annotated tag. | |
